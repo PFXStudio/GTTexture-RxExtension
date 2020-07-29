@@ -12,13 +12,13 @@ import UIKit
 import PINRemoteImage
 
 /** refer
- public static var normal: UIControlState { get }
+ public static var normal: UIControl.State { get }
  
- public static var highlighted: UIControlState { get } // used when UIControl isHighlighted is set
+ public static var highlighted: UIControl.State { get } // used when UIControl isHighlighted is set
  
- public static var disabled: UIControlState { get }
+ public static var disabled: UIControl.State { get }
  
- public static var selected: UIControlState { get } // flag usable by app (see below)
+ public static var selected: UIControl.State { get } // flag usable by app (see below)
  **/
 
 extension Reactive where Base: ASButtonNode {
@@ -31,14 +31,14 @@ extension Reactive where Base: ASButtonNode {
     }
     
     // apply attributedText on targeted control state
-    public func attributedText(_ controlState: UIControlState) -> ASBinder<NSAttributedString?> {
+    public func attributedText(_ controlState: UIControl.State) -> ASBinder<NSAttributedString?> {
         return ASBinder(self.base) { node, attributedText in
             node.setAttributedTitle(attributedText, for: controlState)
         }
     }
     
     // apply text with attribute on all control state
-    public func text(_ attribute: [NSAttributedStringKey: Any]?) -> ASBinder<String?> {
+    public func text(_ attribute: [NSAttributedString.Key: Any]?) -> ASBinder<String?> {
         return ASBinder(self.base) { node, text in
             guard let text = text else {
                 self.setAllAttributedTitle(node, nil)
@@ -51,8 +51,8 @@ extension Reactive where Base: ASButtonNode {
     }
     
     // apply text with attribute on targeted control state
-    public func text(_ attribute: [NSAttributedStringKey: Any]?,
-              target: UIControlState) -> ASBinder<String?> {
+    public func text(_ attribute: [NSAttributedString.Key: Any]?,
+              target: UIControl.State) -> ASBinder<String?> {
         return ASBinder(self.base) { node, text in
             guard let text = text else {
                 node.setAttributedTitle(nil, for: target)
@@ -198,7 +198,7 @@ extension Reactive where Base: ASButtonNode {
     private func downloadImage(_ node: ASButtonNode,
                                url: URL,
                                target: ImageDownloadTarget,
-                               state: UIControlState?) {
+                               state: UIControl.State?) {
         ASPINRemoteImageDownloader.shared()
             .downloadImage(with: url,
                            callbackQueue: DispatchQueue.global(qos: .background),
@@ -227,7 +227,7 @@ extension Reactive where Base: ASButtonNode {
         case disabled(Any?)
         case selected(Any?)
         
-        var state: UIControlState {
+        var state: UIControl.State {
             switch self {
             case .normal:
                 return .normal
@@ -266,16 +266,16 @@ extension Reactive where Base: ASButtonNode {
             }
         }
         
-        var attributes: [NSAttributedStringKey: Any]? {
+        var attributes: [NSAttributedString.Key: Any]? {
             switch self {
             case .normal(let attr):
-                return attr as? [NSAttributedStringKey: Any]
+                return attr as? [NSAttributedString.Key: Any]
             case .highlighted(let attr):
-                return attr as? [NSAttributedStringKey: Any]
+                return attr as? [NSAttributedString.Key: Any]
             case .disabled(let attr):
-                return attr as? [NSAttributedStringKey: Any]
+                return attr as? [NSAttributedString.Key: Any]
             case .selected(let attr):
-                return attr as? [NSAttributedStringKey: Any]
+                return attr as? [NSAttributedString.Key: Any]
             }
         }
     }
