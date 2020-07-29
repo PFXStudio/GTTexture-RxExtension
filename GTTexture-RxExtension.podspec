@@ -13,4 +13,8 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.source_files = 'GTTexture-RxExtension/Classes/**/*'
+  s.dependency 'RxSwift'
+  s.dependency 'RxCocoa'
+  s.dependency 'Texture', '3.0'
+
 end

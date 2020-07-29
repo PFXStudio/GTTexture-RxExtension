@@ -318,7 +318,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GTTexture-RxExtension_Tests/Pods-GTTexture-RxExtension_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GTTexture-RxExtension_Tests/Pods-GTTexture-RxExtension_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
@@ -333,7 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GTTexture-RxExtension_Tests/Pods-GTTexture-RxExtension_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GTTexture-RxExtension_Tests/Pods-GTTexture-RxExtension_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2C5884FE6239834A0A77F859 /* [CP] Check Pods Manifest.lock */ = {
@@ -378,7 +378,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GTTexture-RxExtension_Example/Pods-GTTexture-RxExtension_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GTTexture-RxExtension_Example/Pods-GTTexture-RxExtension_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTTexture-RxExtension/GTTexture_RxExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
@@ -399,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GTTexture-RxExtension_Example/Pods-GTTexture-RxExtension_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GTTexture-RxExtension_Example/Pods-GTTexture-RxExtension_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

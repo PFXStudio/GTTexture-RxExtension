@@ -10,10 +10,10 @@ import AsyncDisplayKit
 import RxSwift
 import RxCocoa
 
-class ViewController: ASViewController<ASDisplayNode> {
+class ViewController: ASDKViewController<ASDisplayNode> {
     let disposeBag = DisposeBag()
     
-    init() {
+    override init() {
         super.init(node: ASDisplayNode())
         self.node.backgroundColor = .white
         self.node.automaticallyManagesSubnodes = true
